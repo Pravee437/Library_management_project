@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Records</title>
+</head>
+<body>
+  <h1>Payment Records</h1>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Amount</th>
+      <th>Card Number</th>
+      <th>Expiration Date</th>
+      <th>CVV</th>
+    </tr>
+    {% for record in payment_records %}
+    <tr>
+      <td>{{ record[0] }}</td>
+      <td>{{ record[1] }}</td>
+      <td>{{ record[2] }}</td>
+      <td>{{ record[3] }}</td>
+      <td>{{ record[4] }}</td>
+      <td>{{ record[5] }}</td>
+      <td>{{ record[6] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
